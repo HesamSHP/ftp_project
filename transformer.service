@@ -1,0 +1,14 @@
+#Put me in /etc/systemd/system/
+[Unit]
+Description = This application is related to transfer files and directories via ftp servers and clients.
+After = network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/share/transporter
+ExecStart=/usr/bin/python3 /usr/share/transporter/transporter.py
+Restart=on-failure # or always, on-abort, etc
+
+[Install]
+WantedBy = multi-user.target # Make it accessible to other users

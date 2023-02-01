@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Protocol should be TLS or FTP --> 
+<config>
+
+  <setting
+      OperationType="Get"
+      OperationName="Default Get"
+      IsDefault="True"
+      Protocol = "TLS"
+      Host = ""
+      PortNumber = ""
+      Username = ""
+      Password = ""
+      FTPSecure = "Explicit"
+      FTPMode = "Active"
+      Certificate = "1f:dc:1f:82:ba:bd:80:36:a2:1f:e6:49:99:f6:7b:48:6b:19:a8:95"
+      SourcePath="/Amaliat-Monitoring/Shahbazi/Shared/Output/"
+      DestPath="H:\FtpRoot\Input\"
+      FileMask="*.*"
+      IsRemove="True" />
+
+  <setting
+      OperationType="Put"
+      OperationName="Default Put"
+      IsDefault="True"
+      Protocol = "TLS"
+      Host = ""
+      PortNumber = "21"
+      Username = ""
+      Password = ""
+      FTPSecure = "Explicit"
+      FTPMode = "Active"
+      Certificate = "1f:dc:1f:82:ba:bd:80:36:a2:1f:e6:49:99:f6:7b:48:6b:19:a8:95"
+      SourcePath="H:\FtpRoot\Output\"
+      DestPath="/Amaliat-Monitoring/Shahbazi/Shared/Input/"
+      FileMask="*.*"
+      IsRemove="True" />
+  
+</config>
